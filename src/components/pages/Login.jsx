@@ -33,9 +33,7 @@ export default function Login({ currentUser, setCurrentUser }) {
 		} catch (err) {
 			console.warn(err)
 			if (err.response) {
-				if (err.response.status === 400) {
-					setMsg(err.response.data.msg)
-				}
+				setMsg(err.response.data.msg)
 			}
 		}
  	}
