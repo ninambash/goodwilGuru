@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 export default function Profile({ currentUser, handleLogout }) {
 	// state for the secret message (aka user privilaged data)
 	const [msg, setMsg] = useState('')
+	
+	const navigate = useNavigate()
 
 	// useEffect for getting the user data and checking auth
 	useEffect(() => {
@@ -30,6 +33,8 @@ export default function Profile({ currentUser, handleLogout }) {
 						if (err.response.status === 401) {
 							// panic!
 							handleLogout()
+							// send the user to the login screen
+							navigate('/login')
 						}
 					}
 				}
@@ -39,9 +44,9 @@ export default function Profile({ currentUser, handleLogout }) {
 
 	return (
 		<div>
-			<h1>Hello, {currentUser.name}</h1>
+			<h1>Hello, {currentUser?.name}</h1>
 
-			<p>your email is {currentUser.email}</p>
+			<p>your email is {currentUser?.email}</p>
 
 			<h2>Here is the secret message that is only availible to users of User App:</h2>
 
