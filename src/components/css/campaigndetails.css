@@ -1,0 +1,85 @@
+.campaign-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .campaign-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .campaign-details h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .campaign-details p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .image-container {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .edit-campaign-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .edit-campaign-container a {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #4285f4;
+    text-decoration: none;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .campaign-details-container {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .campaign-details {
+      margin-right: 20px;
+    }
+  
+    .campaign-details p {
+      margin: 0;
+    }
+  
+    .campaign-details img {
+      max-width: 100%;
+    }
+  
+    .edit-campaign-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  

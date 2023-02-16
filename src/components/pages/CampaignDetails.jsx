@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import CampaignEditForm from './CampaignEditForm';
+import Content from './Content';
+import '../css/campaigndetails.css';
 
 export default function CampaignDetails({ currentUser }) {
   const { id } = useParams();
@@ -12,7 +14,6 @@ export default function CampaignDetails({ currentUser }) {
     content: '',
     image: '',
   });
- 
 
   useEffect(() => {
     axios
@@ -26,25 +27,29 @@ export default function CampaignDetails({ currentUser }) {
         console.log(err);
       });
   }, [id]);
-  
 
   return (
-    <div>
-      <h1>Campaign Details</h1>
-      <p>Name: {campaign.name}</p>
-      <p>Price: {campaign.price}</p>
-      <p>Content: {campaign.content}</p>
-      <img src={campaign.image} alt="Campaign" />
-  
+    <div className="campaign-details-container">
+      <div className="campaign-details">
+        <h1>Campaign Details</h1>
+        <p>Name: {campaign.name}</p>
+        <p>Goal: {campaign.price}</p>
+        <p>Story: {campaign.content}</p>
+        <div className="image-container">
+          <img src={campaign.image} alt="Campaign" />
+        </div>
+      </div>
       {currentUser && (
-        <div>
-          <Link to={`/campaign/${id}/campaignEditForm`}>Edit Campaign</Link>
+        <div className="edit-campaign-container">
+         
           <CampaignEditForm campaign={campaign} />
+          
         </div>
       )}
     </div>
   );
-  
 }
+
+
 
 

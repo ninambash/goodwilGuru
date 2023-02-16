@@ -10,7 +10,7 @@ import CreateItem from './components/pages/CreateItem';
 import Campaigns from './components/pages/Campaigns';
 import CampaignDetails from './components/pages/CampaignDetails';
 import Donate from './components/pages/Donate';
-import CampaignEditForm from './components/pages/CampaignEditForm';
+
 import RecentCard from './components/pages/RecentCard';
 import Recent from './components/pages/Recent';
 
@@ -23,7 +23,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [campaigns, setCampaigns] = useState([]);
   const [campaignDetails, setCampaignDetails] = useState(null);
-  const [CampaignEditForm, setCampaignEditForm] = useState(null)
+ 
   const [donate, setDonate] = useState(null);
   
 
@@ -57,11 +57,7 @@ function App() {
           <Route path="/profile" element={<Profile handleLogout={handleLogout} currentUser={currentUser} setCurrentUser={setCurrentUser} />} />
           <Route path="/campaigns" element={<Campaigns currentUser={currentUser} campaigns={campaigns} setCampaigns={setCampaigns} />} />
           <Route path="/campaign/:id/CampaignDetails" element={<CampaignDetails currentUser={currentUser} campaignDetails={campaignDetails} setCampaignDetails={setCampaignDetails} />} />
-          <Route path="/campaign/:id/CampaignEditForm" 
-             element={<CampaignEditForm 
-             currentUser={currentUser} 
-             setCampaignEditForm={setCampaignEditForm} 
-           />}/>
+          
            <Route path="/campaign/:id/Donate" 
              element={<Donate 
              currentUser={currentUser} 
