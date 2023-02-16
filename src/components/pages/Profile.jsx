@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import '../css/profile.css'
 
 export default function Profile({ currentUser, handleLogout }) {
 	// state for the secret message (aka user privilaged data)
@@ -43,14 +44,18 @@ export default function Profile({ currentUser, handleLogout }) {
 	}, []) // only fire on the first render of this component
 
 	return (
-		<div>
-			<h1>Hello, {currentUser?.name}</h1>
+		<div className="user-profile">
+  <h1 className="greeting">Hello, {currentUser?.name}!</h1>
+  
+  <div className="user-info">
+    <p>Your email is {currentUser?.email}</p>
+    
+  </div>
 
-			<p>your email is {currentUser?.email}</p>
+  <div className="secret-message">
+    <h3 className="message">{msg}</h3>
+  </div>
+</div>
 
-			<h2>Here is the secret message that is only availible to users of User App:</h2>
-
-			<h3>{msg}</h3>
-		</div>
 	)
 }

@@ -9,14 +9,15 @@ export default function CampaignCard({ campaign, handleDonate }) {
 
   return (
    
-        <div className="campaign-card">
+    <div className="campaign-card-row">
+    <div className="campaign-card">
       <div className="campaign-card-image">
         <Link to={{ pathname: `/campaign/${campaign._id}`, state: { campaign } }}>
           <img src={campaign.image} alt={campaign.name} />
         </Link>
       </div>
       <div className="campaign-card-details">
-        <h3>{campaign.name}</h3>
+        <h3 className="campaign-card-name">{campaign.name}</h3>
         <div className="campaign-card-buttons">
           <Link to={`/campaign/${campaign._id}/CampaignDetails`}>
             <button className="campaign-card-button">View Details</button>
@@ -29,6 +30,7 @@ export default function CampaignCard({ campaign, handleDonate }) {
         </div>
       </div>
     </div>
+  </div>
 
   
 

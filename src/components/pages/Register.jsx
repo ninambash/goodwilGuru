@@ -2,6 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import jwt_decode from 'jwt-decode'
 import { Navigate } from 'react-router-dom'
+import '../css/register.css'
 
 export default function Register({ currentUser, setCurrentUser }) {
 	// state for the controlled form

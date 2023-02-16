@@ -8,6 +8,7 @@ import CampaignCard from "./CampaignCard";
 
 import RecentCard from "./RecentCard";
 import Happening from "./Happening";
+import Content from "./Content";
 
 import Hero from "./Hero";
 
@@ -31,6 +32,7 @@ export default function Welcome() {
     <div className="container">
       <div className="content-wrapper">
         <Hero/>
+        <Content/>
        
        
         
@@ -39,8 +41,13 @@ export default function Welcome() {
         <div className="campaigns">
          <Campaigns campaigns={campaigns} />
        </div>
-
+       
+<div>
+ 
+ <h1> Cities Near You</h1>
+</div>
        <Happening/>
+      
        <Heading/>
        
 
