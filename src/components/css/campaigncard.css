@@ -1,0 +1,51 @@
+
+campaign-card {
+    flex-basis: calc(33.33% - 20px); box-sizing: border-box; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0px 0px 5px #ddd; margin: 10px; padding: 10px; background-color: white; 
+  }
+  
+  .campaign-card-image {
+    display: flex; justify-content: center; align-items: center; height: 200px; overflow: hidden;
+  }
+  
+  .campaign-card-image img {
+    height: 100%;
+    width: auto;
+  }
+  
+  .campaign-card-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .campaign-card-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .campaign-card-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .campaign-card-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .campaign-card-button:hover {
+    background-color: #2980b9;
+  }
+  

@@ -1,0 +1,95 @@
+.location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box {
+    flex: 1 0 250px;
+    margin: 10px;
+    position: relative;
+  }
+  
+  .box img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(15 28 47 / 30%);
+    z-index: -1;
+    border-radius: 5px;
+  }
+  
+  .box:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay h5 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .overlay label {
+    font-size: 14px;
+    margin-right: 10px;
+    opacity: 0.8;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .box {
+      flex: 1 0 45%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .box {
+      flex: 1 0 100%;
+    }
+  
+    .overlay::after {
+      border-radius: 0;
+    }
+  
+    .overlay h5 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+  
+    .overlay label {
+      font-size: 12px;
+      margin-right: 5px;
+    }
+  }
+  

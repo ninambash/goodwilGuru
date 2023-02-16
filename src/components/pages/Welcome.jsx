@@ -1,7 +1,51 @@
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import Campaigns from "./Campaigns"
+import Heading from "./Heading";
+
+import CampaignCard from "./CampaignCard";
+
+import RecentCard from "./RecentCard";
+import Happening from "./Happening";
+
+import Hero from "./Hero";
+
+import '../css/welcome.css'
+
 export default function Welcome() {
-	return (
-		<div>
-			hello from welcome
-		</div>
-	)
+  const [campaigns, setCampaigns] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_SERVER_URL}/campaign`)
+    
+      .then(res => {
+        setCampaigns(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
+  return (
+    <div className="container">
+      <div className="content-wrapper">
+        <Hero/>
+       
+       
+        
+
+
+        <div className="campaigns">
+         <Campaigns campaigns={campaigns} />
+       </div>
+
+       <Happening/>
+       <Heading/>
+       
+
+        
+      </div>
+    </div>
+  );
 }

@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center; 
+}
+
+.create-button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .campaigns {
+    width: 60%;
+    margin-right: 20px;
+  }
+
+  .campaign-details {
+    width: 40%;
+  }
+}
