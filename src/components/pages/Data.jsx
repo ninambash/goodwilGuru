@@ -75,18 +75,24 @@ export const footer = [
       name: "Jerrsy, United State",
       
       cover: "https://cdn.onlyinyourstate.com/wp-content/uploads/2017/12/1200px-Clinton_NJ_Easter_2014-700x465.jpg",
+      adress:"250 Florida St",
     },
     {
       id: 3,
       name: "Nairobi, Kenya",
       
       cover: "https://images.pexels.com/photos/13348192/pexels-photo-13348192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      adress:"250 Florida St",
+
+
     },
     {
       id: 3,
-      name: "Nairobi, Kenya",
+      name: "San Francisco, Ca",
       
-      cover: "https://images.pexels.com/photos/13348192/pexels-photo-13348192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      cover: "https://images.pexels.com/photos/208745/pexels-photo-208745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      adress:"250 Florida St",
+      
     },
     
     

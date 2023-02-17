@@ -1,36 +1,37 @@
-
-import StripeCheckout from 'react-stripe-checkout';
 import React, { useState } from 'react';
+import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
-import '../css/payment.css'
+import '../css/payment.css';
 
 const MySwal = withReactContent(Swal);
 
 function Payment() {
-  const publishableKey =
-    `process.env.secret_key`;
+  const REACT_APP_STRIPE_PUBLISHABLE_KEY = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;
   const [product, setProduct] = useState({
-    name: 'Headphone',
+    name: 'Donation',
     price: 5,
   });
+  console.log(REACT_APP_STRIPE_PUBLISHABLE_KEY, 'REACT_APP_STRIPE_PUBLISHABLE_KEY')
   const priceForStripe = product.price * 100;
 
   const handleSuccess = () => {
     MySwal.fire({
       icon: 'success',
       title: 'Payment was successful',
-      time: 4000,
+      timer: 4000,
     });
   };
+
   const handleFailure = () => {
     MySwal.fire({
       icon: 'error',
       title: 'Payment was not successful',
-      time: 4000,
+      timer: 4000,
     });
   };
+
   const payNow = async token => {
     try {
       const response = await axios({
@@ -52,16 +53,15 @@ function Payment() {
 
   return (
     <div className="container">
-      <h2>Complete React & Stripe payment integration</h2>
+    
       <p>
-        <span>Product: </span>
         {product.name}
       </p>
       <p>
         <span>Price: </span>${product.price}
       </p>
       <StripeCheckout
-        stripeKey={publishableKey}
+        stripeKey={REACT_APP_STRIPE_PUBLISHABLE_KEY}
         label="Pay Now"
         name="Pay With Credit Card"
         billingAddress

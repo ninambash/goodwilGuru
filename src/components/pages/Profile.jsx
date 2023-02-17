@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import '../css/profile.css'
+import Content from './Content'
 
 export default function Profile({ currentUser, handleLogout }) {
 	// state for the secret message (aka user privilaged data)
@@ -51,9 +52,9 @@ export default function Profile({ currentUser, handleLogout }) {
     <p>Your email is {currentUser?.email}</p>
     
   </div>
-
   <div className="secret-message">
     <h3 className="message">{msg}</h3>
+	<Content/>
   </div>
 </div>
 

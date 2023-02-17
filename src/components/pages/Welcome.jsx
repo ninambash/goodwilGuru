@@ -21,6 +21,7 @@ export default function Welcome() {
     axios.get(`${process.env.REACT_APP_SERVER_URL}/campaign`)
     
       .then(res => {
+        console.log('Campaign', res.data)
         setCampaigns(res.data);
       })
       .catch(err => {
@@ -33,10 +34,6 @@ export default function Welcome() {
       <div className="content-wrapper">
         <Hero/>
         <Content/>
-       
-       
-        
-
 
         <div className="campaigns">
          <Campaigns campaigns={campaigns} />

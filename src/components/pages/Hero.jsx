@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/hero.css';
+import Navbar from '../Navbar';
 
 const Hero = () => {
   return (
     <section className="hero">
+  
       <div className="hero-image"></div>
       <div className="hero-content">
         <h1>Your home for help</h1>
@@ -12,6 +14,11 @@ const Hero = () => {
         <Link to="/CreateItem">
           <button className="create-button">Start a Campaign</button>
         </Link>
+        
+
+        <div>
+
+        </div>
       </div>
     </section>
   );
