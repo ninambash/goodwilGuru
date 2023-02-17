@@ -1,6 +1,8 @@
 GoodwillGuru
 #  Pitch
-Introducing a revolutionary new app designed to connect people in need with those who want to help. Our app provides a platform for users to create and manage fundraising campaigns to help them access essential resources, like food, shelter, and medical care. The app features RESTful routing and is powered by a MongoDb database, ensuring a seamless and efficient experience for users. With an intuitive and user-friendly interface built with React, it's never been easier to make a difference in the world. Join us in our mission to make the world a better place, one campaign at a time.
+ I have always had a deep love and concern for animals, and as a developer, I wanted to use my skills to help make a positive impact in their lives. When I looked into the state of animal shelters in my area, I saw that many of them were struggling to provide basic care and resources for the animals they were trying to help. I knew that crowdfunding could be a powerful tool for raising funds and awareness, and so I decided to focus my project on creating a platform that would help animal shelters connect with donors and raise the resources they need to provide better care for animals in need.
+
+
 
 
 # Deployed link

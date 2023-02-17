@@ -8,12 +8,16 @@ import '../css/payment.css';
 const MySwal = withReactContent(Swal);
 
 function Payment() {
-  const REACT_APP_STRIPE_PUBLISHABLE_KEY = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;
+  const REACT_APP_STRIPE_PUBLISHABLE_KEY =
+    process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;
   const [product, setProduct] = useState({
     name: 'Donation',
     price: 5,
   });
-  console.log(REACT_APP_STRIPE_PUBLISHABLE_KEY, 'REACT_APP_STRIPE_PUBLISHABLE_KEY')
+  console.log(
+    REACT_APP_STRIPE_PUBLISHABLE_KEY,
+    'REACT_APP_STRIPE_PUBLISHABLE_KEY'
+  );
   const priceForStripe = product.price * 100;
 
   const handleSuccess = () => {
@@ -32,7 +36,7 @@ function Payment() {
     });
   };
 
-  const payNow = async token => {
+  const payNow = async (token) => {
     try {
       const response = await axios({
         url: 'http://localhost:8000/payment',
@@ -53,10 +57,7 @@ function Payment() {
 
   return (
     <div className="container">
-    
-      <p>
-        {product.name}
-      </p>
+      <p>{product.name}</p>
       <p>
         <span>Price: </span>${product.price}
       </p>
