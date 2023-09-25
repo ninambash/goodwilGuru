@@ -6,7 +6,7 @@ GoodwillGuru
 
 
 # Deployed link
-# ()
+# (https://unrivaled-gelato-e66c4f.netlify.app/)
 
 
 # Install 
